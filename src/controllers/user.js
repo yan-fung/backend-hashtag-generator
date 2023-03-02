@@ -1,10 +1,22 @@
-const { User } = require('../models');
+const { User, Hashtag } = require('../models');
+
+const removePassword = (obj) => {
+  if (obj.hasOwnProperty('password')) {
+    delete obj.password;
+  }
+
+  return obj;
+}
 
 exports.getAllUsers = async (_req, res) => {
   try {
-    const allUser = await User.findAll();
+    const allUser = await User.findAll({ include: Hashtag });
 
-    res.status(200).json(allUser);
+    const allUserWithoutPassword = allUser.map((user) => {
+      return removePassword(user.dataValues);
+    })
+
+    res.status(200).json(allUserWithoutPassword);
   } catch (error) {
     res.status(500).json(error);
   }
@@ -12,12 +24,13 @@ exports.getAllUsers = async (_req, res) => {
 
 exports.getUserById = async (req, res) => {
   const userId = req.params.id;
-  const user = await User.findByPk(userId);
+  const user = await User.findByPk(userId, { include: Hashtag });
 
   if (!user) {
     res.status(404).json({ message: `user ${userId} does not exist` })
   } else {
-    res.status(200).json(user);
+    const userWithoutPassword = removePassword(user.dataValues);
+    res.status(200).json(userWithoutPassword);
   }
 }
 
