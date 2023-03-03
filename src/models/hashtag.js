@@ -20,7 +20,7 @@ module.exports = (connection, DataTypes) => {
           },
         },
       },
-      content: {
+      hashtags: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
