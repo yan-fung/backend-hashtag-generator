@@ -1,5 +1,15 @@
 module.exports = (connection, DataTypes) => {
     const schema = {
+      userId: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: {
+            args: 10,
+            msg: 'Please provide the user ID'
+          },
+        },
+      },
       title: {
         type: DataTypes.STRING,
         allowNull: false,
