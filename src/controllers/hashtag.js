@@ -9,9 +9,9 @@ exports.getAllHashtags = async (_req, res) => {
   }
 }
 
-exports.getHashtagById = async (req, res) => {
-  const hashtagId = req.params.id;
-  const hashtag = await Hashtag.findByPk(hashtagId);
+exports.getHashtagByCategory = async (req, res) => {
+  const specificCategory = req.params.category;
+  const hashtag = await Hashtag.findAll({ where: { category: specificCategory}});
 
   if (!hashtag) {
     res.status(404).json({ message: `Hashtag ${hashtagId} does not exist` })
@@ -26,7 +26,7 @@ exports.createHashtag = async (req, res) => {
 
     res.status(201).json(newHashtag);
   } catch (error) {
-    const errorMessages = error.errors.map((e) => e.message);
+    const errorMessages = error.errors?.map((e) => e.message);
 
     res.status(400).json({ errors: errorMessages });
   }
