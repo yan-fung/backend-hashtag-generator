@@ -14,6 +14,7 @@ exports.getHashtag = async (req, res) => {
   try {
     let searchResult = await axios(config);
     res.status(200).json(searchResult.data.post)
+    console.log(searchResult.data.post, "THIS!")
 
   } catch (error) {
     console.error(error);
