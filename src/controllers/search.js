@@ -6,16 +6,15 @@ exports.getHashtag = async (req, res) => {
   const config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: `https://api.ritekit.com/v1/stats/auto-hashtag?post=${keyword}&maxHashtags=30&hashtagPosition=auto`,
-    params: {client_id: process.env.client_id},
-    headers: { }
+    url: `https://api.ritekit.com/v1/stats/auto-hashtag?post=${keyword}&maxHashtags=20&hashtagPosition=auto`,
+    params: { client_id: process.env.client_id },
+    headers: {},
   };
 
   try {
     let searchResult = await axios(config);
-    res.status(200).json(searchResult.data.post)
-    console.log(searchResult.data.post, "THIS!")
-
+    res.status(200).json(searchResult.data.post);
+    console.log(searchResult.data.post, 'THIS!');
   } catch (error) {
     console.error(error);
   }
@@ -27,4 +26,4 @@ exports.getHashtag = async (req, res) => {
   // .catch(function (error) {
   //   console.log(error);
   // });
-}
+};
