@@ -10,6 +10,9 @@
 ## Introduction
 This is the backend for #️Hashtify app. This was a group project as part of the Command Shift bootcamp course.
 
+
+
+
 ## Quick Start and Commands
 
 1. Clone the repo:
@@ -34,7 +37,7 @@ npm test
 
 - [Postman](https://www.postman.com/downloads/)
 - [pgAdmin](https://www.pgadmin.org/download/)
-- [Docker] (https://www.docker.com/products/docker-desktop/)
+- [Docker](https://www.docker.com/products/docker-desktop/)
 
 ### Development Mode
 
@@ -46,50 +49,24 @@ Auth endpoints and methods
 
 | **Methods** |   **Urls**   |     **Actions**      |
 | :---------- | :----------: | :------------------: |
-| GET         |   /artists   |   get all artists    |
-| GET         | /artists/:id |   get artist by id   |
-| POST        |   /artists   |    add new artist    |
-| PUT         | /artists/:id | update artist by id  |
-| PATCH       | /artists/:id | update artists by id |
-| DELETE      | /artists/:id | remove artists by id |
+| POST        |   /auth/:id  | handle authentication|
 
 Hashtag endpoints and methods
 
 | **Methods** |        **Urls**         |              **Actions**              |
 | :---------- | :---------------------: | :-----------------------------------: |
-| GET         |         /albums         |            get all albums             |
-| GET         |       /albums/:id       |            get album by id            |
-| POST        | /albums/:artistId/album | add new albums to the specific artist |
-| PUT         |       /albums/:id       |          update album by id           |
-| PATCH       |       /albums/:id       |          update album by id           |
-| DELETE      |       /albums/:id       |          remove album by id           |
+| GET         |         /hashtags       |            get all hashtags           |
+| GET         |  /hashtags/:id/hashtag  |        get all hashtags by user id    |
+| GET         |    /hashtags/:category  |      get all hashtags by category     |
+| GET         | /hashtags/:id/:category |  get specific hashtags by user id     |
+| POST        |         /hashtags       |            add hashtags               |
+| DELETE      |       /hashtags/:id     |          remove hashtag by id         |
 
-Image endpoints and methods
-| **Methods** |   **Urls**   |     **Actions**      |
-| :---------- | :----------: | :------------------: |
-| GET         |   /artists   |   get all artists    |
-| GET         | /artists/:id |   get artist by id   |
-| POST        |   /artists   |    add new artist    |
-| PUT         | /artists/:id | update artist by id  |
-| PATCH       | /artists/:id | update artists by id |
-| DELETE      | /artists/:id | remove artists by id |
+## APIs Used
+[RiteKit API](https://ritekit.com/accounts/)
 
-Search endpoints and methods
-| **Methods** |   **Urls**   |     **Actions**      |
-| :---------- | :----------: | :------------------: |
-| GET         |   /artists   |   get all artists    |
-| GET         | /artists/:id |   get artist by id   |
-| POST        |   /artists   |    add new artist    |
-| PUT         | /artists/:id | update artist by id  |
-| PATCH       | /artists/:id | update artists by id |
-| DELETE      | /artists/:id | remove artists by id |
+- Generate hashtags by image
 
-Stats endpoints and methods
-| **Methods** |   **Urls**   |     **Actions**      |
-| :---------- | :----------: | :------------------: |
-| GET         |   /artists   |   get all artists    |
-| GET         | /artists/:id |   get artist by id   |
-| POST        |   /artists   |    add new artist    |
-| PUT         | /artists/:id | update artist by id  |
-| PATCH       | /artists/:id | update artists by id |
-| DELETE      | /artists/:id | remove artists by id |
+- Generate hashtags by keyword
+
+- Hashtag stats
