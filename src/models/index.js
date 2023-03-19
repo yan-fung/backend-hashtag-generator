@@ -1,4 +1,4 @@
-const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 const HashtagModel = require('./hashtag');
 
 const { PGDATABASE, PGUSER, PGPASSWORD, PGHOST, PGPORT } = process.env;
@@ -13,12 +13,6 @@ const setupDatabase = () => {
   });
 
   const Hashtag = HashtagModel(connection, Sequelize);
-
-  // User.hasMany(Hashtag, {
-  //   foreignKey: {
-  //       allowNull: false,
-  //   }
-  // });
 
   connection.sync({ alter: true });
   return { Hashtag };
