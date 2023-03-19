@@ -3,8 +3,6 @@
 
 </h1>
 
-
-
 <p align="center" width="100%">
     <img width="23%" src="https://user-images.githubusercontent.com/106375522/226183176-10a763c0-ed81-4784-aae9-e0863c4f8247.jpg"
 </p>
@@ -12,15 +10,12 @@
 ## Introduction
 This is the backend for #️Hashtify app. This was a group project as part of the Command Shift bootcamp course.
 
-##Purpose
-
-
 ## Quick Start and Commands
 
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/yan-fung/music-library-.git
+git clone gh repo clone yan-fung/backend-hashtag-generator
 ```
 
 2. Run the development server for the app. It listens on port 4000.
@@ -39,6 +34,7 @@ npm test
 
 - [Postman](https://www.postman.com/downloads/)
 - [pgAdmin](https://www.pgadmin.org/download/)
+- [Docker] (https://www.docker.com/products/docker-desktop/)
 
 ### Development Mode
 
@@ -46,7 +42,7 @@ The server side Express code will be served by a node server using [Nodemon](htt
 
 ## API Endpoints and Methods
 
-Artists endpoints and methods
+Auth endpoints and methods
 
 | **Methods** |   **Urls**   |     **Actions**      |
 | :---------- | :----------: | :------------------: |
@@ -57,7 +53,7 @@ Artists endpoints and methods
 | PATCH       | /artists/:id | update artists by id |
 | DELETE      | /artists/:id | remove artists by id |
 
-Albums endpoints and methods
+Hashtag endpoints and methods
 
 | **Methods** |        **Urls**         |              **Actions**              |
 | :---------- | :---------------------: | :-----------------------------------: |
@@ -67,3 +63,33 @@ Albums endpoints and methods
 | PUT         |       /albums/:id       |          update album by id           |
 | PATCH       |       /albums/:id       |          update album by id           |
 | DELETE      |       /albums/:id       |          remove album by id           |
+
+Image endpoints and methods
+| **Methods** |   **Urls**   |     **Actions**      |
+| :---------- | :----------: | :------------------: |
+| GET         |   /artists   |   get all artists    |
+| GET         | /artists/:id |   get artist by id   |
+| POST        |   /artists   |    add new artist    |
+| PUT         | /artists/:id | update artist by id  |
+| PATCH       | /artists/:id | update artists by id |
+| DELETE      | /artists/:id | remove artists by id |
+
+Search endpoints and methods
+| **Methods** |   **Urls**   |     **Actions**      |
+| :---------- | :----------: | :------------------: |
+| GET         |   /artists   |   get all artists    |
+| GET         | /artists/:id |   get artist by id   |
+| POST        |   /artists   |    add new artist    |
+| PUT         | /artists/:id | update artist by id  |
+| PATCH       | /artists/:id | update artists by id |
+| DELETE      | /artists/:id | remove artists by id |
+
+Stats endpoints and methods
+| **Methods** |   **Urls**   |     **Actions**      |
+| :---------- | :----------: | :------------------: |
+| GET         |   /artists   |   get all artists    |
+| GET         | /artists/:id |   get artist by id   |
+| POST        |   /artists   |    add new artist    |
+| PUT         | /artists/:id | update artist by id  |
+| PATCH       | /artists/:id | update artists by id |
+| DELETE      | /artists/:id | remove artists by id |
