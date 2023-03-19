@@ -6,7 +6,6 @@ const corsOptions = {
   credentials: true,
 };
 
-// const userRouter = require('./routes/user');
 const hashtagRouter = require('./routes/hashtag');
 const searchRouter = require('./routes/search');
 const statsRouter = require('./routes/stats');
@@ -18,8 +17,6 @@ const app = express();
 app.use(express.json());
 app.use(cors(corsOptions));
 
-// app.use('/users', userRouter);
-// app.use('/users', hashtagRouter);
 app.use('/hashtags', hashtagRouter);
 app.use('/search', searchRouter);
 app.use('/stats', statsRouter);
