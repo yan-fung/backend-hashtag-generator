@@ -1,13 +1,12 @@
 const axios = require('axios');
 
 exports.getHashtagsByImage = async (req, res) => {
-  const url = req.params.url;
-  const url2 = encodeURIComponent(`${url}`);
+  const ImageUrl = encodeURIComponent(req.params.url);
 
   const config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: `https://api.ritekit.com/v1/stats/hashtag-suggestions-image?image=${url2}`,
+    url: `https://api.ritekit.com/v1/stats/hashtag-suggestions-image?image=${ImageUrl}`,
     params: { client_id: process.env.client_id },
     headers: {},
   };
@@ -16,10 +15,9 @@ exports.getHashtagsByImage = async (req, res) => {
     let imageResult = await axios(config);
     res.status(200).json(imageResult.data.data);
     console.log(
-      `https://api.ritekit.com/v1/stats/hashtag-suggestions-image?image=${url}`
+      `https://api.ritekit.com/v1/stats/hashtag-suggestions-image?image=${ImageUrl}`
     );
-    console.log(imageResult.data, 'THIS!');
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 };
