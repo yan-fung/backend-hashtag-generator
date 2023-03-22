@@ -47,13 +47,13 @@ The server side Express code will be served by a node server using [Nodemon](htt
 
 Auth endpoints and methods
 
-| **Methods** |   **Urls**   |     **Actions**      |
+| **Methods** |   **URLs**   |     **Actions**      |
 | :---------- | :----------: | :------------------: |
 | POST        |   /auth/:id  | handle authentication|
 
 Hashtag endpoints and methods
 
-| **Methods** |        **Urls**         |              **Actions**              |
+| **Methods** |        **URLs**         |              **Actions**              |
 | :---------- | :---------------------: | :-----------------------------------: |
 | GET         |         /hashtags       |            get all hashtags           |
 | GET         |  /hashtags/:id/hashtag  |        get all hashtags by user id    |
