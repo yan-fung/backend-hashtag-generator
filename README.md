@@ -69,6 +69,6 @@ Hashtag endpoints and methods
 
 - Hashtag stats
 
-## Thanks
--  Thanks to my teammate - [Geroge](https://github.com/George-xixi)
--  Thanks to all the tutors and everyone in our cohort at [Command Shift](https://github.com/CommandShiftHQ).
+## Thank You
+-  Thank you to my teammate - [Geroge](https://github.com/George-xixi)
+-  Thank you to all the tutors and everyone in our cohort at [Command Shift](https://github.com/CommandShiftHQ).
