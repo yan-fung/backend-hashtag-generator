@@ -68,3 +68,7 @@ Hashtag endpoints and methods
 - Generate hashtags by keyword
 
 - Hashtag stats
+
+## Thanks
+-  Thanks to my teammate - [Geroge](https://github.com/George-xixi)
+-  Thanks to all the tutors and everyone in our cohort at [Command Shift](https://github.com/CommandShiftHQ).
