@@ -8,7 +8,7 @@
 </p>
 
 ## Introduction
-This is the backend for #️Hashtify app [(Please click the front-end repo here.)](https://github.com/George-xixi/hashtify) This group project was created by [Geroge](https://github.com/George-xixi) and [Yan](https://github.com/yan-fung) as part of the Command Shift bootcamp course.
+This is the backend for #️Hashtify app [(frontend repo here)](https://github.com/George-xixi/hashtify) This group project was created by [Geroge](https://github.com/George-xixi) and [Yan](https://github.com/yan-fung) as part of the Command Shift bootcamp course.
 
 
 ## Quick Start and Commands
